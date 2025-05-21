@@ -22,6 +22,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/html/laravel-prac
+            echo "Running as user: $(whoami)"
+
+            ls -ld storage bootstrap/cache
+            ls -l storage/logs
 
             sudo chown -R www-data:www-data storage bootstrap/cache
             sudo chmod -R 775 storage bootstrap/cache
