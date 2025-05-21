@@ -15,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    FirstJob::dispatch();
-    return "job excecuted";
+    return "first ci cd piplien created";
 });
