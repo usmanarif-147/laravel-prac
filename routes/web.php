@@ -17,11 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $user = User::create([
-        'name' => 'usman',
-        'email' => 'usman@gmail.com',
-        'password' => Hash::make('11223344')
-    ]);
-
-    return $user;
+    return "enabled ssh";
 });
